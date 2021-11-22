@@ -1,22 +1,21 @@
-from flask import Flask,request, url_for, redirect, render_template  ## importing necessary libraries
-import pickle  ## pickle for loading model(Diabetes.pkl)
-import pandas as pd  ## to convert the input data into a dataframe for giving as a input to the model
+from flask import Flask,request, url_for, redirect, render_template
+import pickle
+import pandas as pd
 
-app = Flask(__name__)  ## setting up flask name
+app = Flask(__name__)
 
-model = pickle.load(open("Diabetes.pkl", "rb"))  ##loading model
-
-
-@app.route('/')             ## Defining main index route
-def home():
-    return render_template("index.html")   ## showing index.html as homepage
+model = pickle.load(open("Diabetes.pkl", "rb"))
 
 
-@app.route('/predict',methods=['POST','GET'])  ## this route will be called when predict button is called
-def predict(): 
-    #int_features=[float(x) for x in request.form.values()]
-    text1 = request.form['1']      ## Fetching each input field value one by one
-    text2 = request.form['2'] 
+@app.route('/')
+def hello_world():
+    return render_template("index.html")
+
+
+@app.route('/predict',methods=['POST','GET'])
+def predict():
+    text1 = request.form['1']
+    text2 = request.form['2']
     text3 = request.form['3']
     text4 = request.form['4']
     text5 = request.form['5']
@@ -24,18 +23,18 @@ def predict():
     text7 = request.form['7']
     text8 = request.form['8']
  
-    row_df = pd.DataFrame([pd.Series([text1,text2,text3,text4,text5,text6,text7,text8])])  ### Creating a dataframe using all the values
+    row_df = pd.DataFrame([pd.Series([text1,text2,text3,text4,text5,text6,text7,text8])])
     print(row_df)
-    prediction=model.predict_proba(row_df) ## Predicting the output
-    output='{0:.{1}f}'.format(prediction[0][1], 2)    ## Formating output
-
+    prediction=model.predict_proba(row_df)
+    output='{0:.{1}f}'.format(prediction[0][1], 2)
+    output = str(float(output)*100)+'%'
     if output>str(0.5):
-        return render_template('index.html',pred='You have chance of having diabetes.\nProbability of having Diabetes is {}'.format(output)) ## Returning the message for use on the same index.html page
+        return render_template('result.html',pred=f'You have chance of having diabetes.\nProbability of having Diabetes is {output}')
     else:
-        return render_template('index.html',pred='You are safe.\n Probability of having diabetes is {}'.format(output)) 
+        return render_template('result.html',pred=f'You are safe.\n Probability of having diabetes is {output}')
 
 
 
 
 if __name__ == '__main__':
-    app.run(debug=True)          ## Running the app as debug==True
+    app.run(debug=True)

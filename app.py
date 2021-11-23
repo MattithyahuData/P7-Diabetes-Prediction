@@ -1,4 +1,4 @@
-from flask import Flask,request, url_for, redirect, render_template
+from flask import Flask,request, url_for, redirect, render_template # From flask import flask [Render-template refers to the html]
 import pickle
 import pandas as pd
 

@@ -71,7 +71,7 @@ On Page 2 of the interactive dashboard I have provided the stake holders with th
 *   The complaints team should pay particular attention to complaints from customers who are predicted to churn.
 - 96% of unhappy customers dont complain  and 91% of those will simply leave and never come back?
 
-## [Feature Engineering](Code/P2_Code.ipynb)    ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LEFT OFFFF 
+## [Feature Engineering](Code/P2_Code.ipynb)    ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LEFT OFFFF  FINISH TODAY 
 I transformed the categorical variable(s) 'geography' and 'gender' into dummy variables. I also split the data into train and tests sets with a test size of 20%.
 *   One Hot encoding to encode values
 *   Using RobustScaler to scale  

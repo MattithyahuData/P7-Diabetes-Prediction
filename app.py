@@ -1,17 +1,26 @@
-from flask import Flask,request, url_for, redirect, render_template # From flask import flask [Render-template refers to the html]
+# Importing project dependencies 
+
+# Model importing
 import pickle
+
+# Webapp creation and model use template rendering 
+from flask import Flask,request, url_for, redirect, render_template # From flask import flask [Render-template refers to the html]
+
+# Data handling
 import pandas as pd
 
+# Creating flask app / Initiating app
 app = Flask(__name__)
 
+# Load pickle model
 model = pickle.load(open("Diabetes.pkl", "rb"))
 
-
+# Define the home page
 @app.route('/')
 def hello_world():
     return render_template("index.html")
 
-
+# route() decorator to tell Flask what URL should trigger our function.
 @app.route('/predict',methods=['POST','GET'])
 def predict():
     text1 = request.form['1']

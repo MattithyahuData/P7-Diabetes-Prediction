@@ -1,6 +1,6 @@
-# 🏦 Bank Churn Analysis: Project Overview  
+# 🍫 Diabetes Prediction: Project Overview  
 * End to end project reasearching the effects attributes have on the churn of a bank customer and predicting those customers that may churn.
-* Optimized KNN, SVC, Decision Tree, and Random Forest Regressors using GridsearchCV to reach the best model. 
+* Optimized KNN, SVC, Decision Tree, and Random Forest Regressors using GridsearchCV and RandomizedSearchCV to reach the best model. 
 * Built a stakeholder facing visual deployment of model to predict churn of new customers 
 * Deployed Model in Power BI for Business Intelligence analysis 
 

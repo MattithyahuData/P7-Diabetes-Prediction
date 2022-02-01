@@ -6,11 +6,20 @@
 
 
 [View Deployed Model in Power BI](https://app.powerbi.com/view?r=eyJrIjoiNDExYjQ0OTUtNWI5MC00OTQ5LWFlYmUtYjNkMzE1YzE2NmE0IiwidCI6IjYyZWE3MDM0LWI2ZGUtNDllZS1iZTE1LWNhZThlOWFiYzdjNiJ9&pageName=ReportSection)
-         
+
+## Table of Contents 
+### *   [Resources](#resources)
+### *   [Data Collection](#DataCollection)
+
+<a name="resources"></a>  
+
 ## Resources Used
 **Python 3.8, SQL Server, Power BI** 
 
 [**Anaconda Packages:**](requirements.txt) **pandas, numpy, pandas_profiling, ipywidgets, sklearn, matplotlib, seaborn, sqlalchemy, pyodbc, kaggle, pickle, lxml**   
+
+
+<a name="DataCollection"></a>  
 
 ## [Data Collection](Code/P2_Code.ipynb)
 Data loaded using kaggle API <br>

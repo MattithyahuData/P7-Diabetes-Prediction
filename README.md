@@ -1,11 +1,11 @@
 # 🍫 Diabetes Prediction: Project Overview  
-* End to end project reasearching the effects attributes have on the churn of a bank customer and predicting those customers that may churn.
-* Optimized KNN, SVC, Decision Tree, and Random Forest Regressors using GridsearchCV and RandomizedSearchCV to reach the best model. 
+* End to end project reasearching the effects personal attributes have on the diagnosis of diabetes.
+* Optimised KNN, SVC, Decision Tree, and Random Forest Regressors using GridsearchCV and RandomizedSearchCV to reach the best model. 
 * Built a stakeholder facing visual deployment of model to predict churn of new customers 
 * Deployed Model in Power BI for Business Intelligence analysis 
 
 
-[View Deployed Model in Power BI](https://app.powerbi.com/view?r=eyJrIjoiNDExYjQ0OTUtNWI5MC00OTQ5LWFlYmUtYjNkMzE1YzE2NmE0IiwidCI6IjYyZWE3MDM0LWI2ZGUtNDllZS1iZTE1LWNhZThlOWFiYzdjNiJ9&pageName=ReportSection)
+[Use Deployed Model](https://p7-diabetes-model.herokuapp.com/)
 
 ## Table of Contents 
 ### *   [Resources](#resources)
@@ -14,49 +14,44 @@
 <a name="resources"></a>  
 
 ## Resources Used
-**Python 3.8, SQL Server, Power BI** 
+**Python 3, SQL Server, Tableau** 
 
 [**Anaconda Packages:**](requirements.txt) **pandas, numpy, pandas_profiling, ipywidgets, sklearn, matplotlib, seaborn, sqlalchemy, pyodbc, kaggle, pickle, lxml**   
 
 
 <a name="DataCollection"></a>  
 
-## [Data Collection](Code/P2_Code.ipynb)
-Data loaded using kaggle API <br>
+## [Data Collection](Code/P7_Code.ipynb)
+Data imported using kaggle API <br>
 ```
-!kaggle datasets download -d kmalit/bank-customer-churn-prediction -p ..\Data --unzip 
+!kaggle datasets download -d mathchi/diabetes-data-set -p ..\Data --unzip 
 ```
-[Data source link](https://www.kaggle.com/kmalit/bank-customer-churn-prediction)
-[Data](Data/Churn_Modelling.csv)
-*  Rows: 10000 | Columns: 14
-    *   RowNumber
-    *   CustomerId  
-    *   Surname 
-    *   CreditScore
-    *   Geography
-    *   Gender
-    *   Age
-    *   Tenure
-    *   Balance
-    *   NumOfProducts
-    *   HasCrCard
-    *   IsActiveMember
-    *   EstimatedSalary
-    *   Exited
+[Data source link](https://www.kaggle.com/mathchi/diabetes-data-set)
+[Data](Data/diabetes.csv)
+*  Rows: 768 | Columns: 9
+    *   Pregnancies                   
+    *   Glucose                      
+    *   BloodPressure                 
+    *   SkinThickness                 
+    *   Insulin                      
+    *   BMI                    
+    *   DiabetesPedigreeFunction    
+    *   Age                          
+    *   Outcome                       
 
 
-## [Data Pre-processing](Code/P2_Code.ipynb)
+## [Data Pre-processing](Code/P7_Code.ipynb)
 After I had all the data I needed, I needed to check it was ready for exploration and later modelling. I made the following changes and created the following variables:   
 *   General NULL and data validity checks  
 
 
-## [Data Warehousing](Code/P2_Code.ipynb)
+## [Data Warehousing](Code/P7_Code.ipynb)
 I warehouse all data in a SQL Server instance for later use and reference.
 
 *   ETL in python to SQL Server Database.
 *   Formatted column headers to SQL compatibility.  
 
-## [Exploratory data analysis](Code/P2_Code.ipynb) 
+## [Exploratory data analysis](Code/P7_Code.ipynb) 
 I looked at the distributions of the data and the value counts for the various categorical variables that would be fed into the model. Below are a few highlights from the analysis.
 *   79.63% of customers have churned - Distrubution of features and their effects on churning - Some features have outliers, visualising this allows for greater clarifty on the extent. 
 <img src="images/Churn_barchart_distrib.png" />

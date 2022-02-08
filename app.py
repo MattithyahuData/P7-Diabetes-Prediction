@@ -44,6 +44,6 @@ def predict():
 
 
 
-
+# Only allowing file to run from this file 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -10,6 +10,9 @@
 ## Table of Contents 
 ### *   [Resources](#resources)
 ### *   [Data Collection](#DataCollection)
+### *   [Data Pre-processing](#DataPre-processing)
+### *   [Data Warehousing](#DataWarehousing)
+
 
 <a name="resources"></a>  
 
@@ -40,10 +43,13 @@ Data imported using kaggle API <br>
     *   Outcome                       
 
 
+<a name="DataPre-processing"></a>  
+
 ## [Data Pre-processing](Code/P7_Code.ipynb)
 After I had all the data I needed, I needed to check it was ready for exploration and later modelling. I made the following changes and created the following variables:   
 *   General NULL and data validity checks  
 
+<a name="DataWarehousing"></a>
 
 ## [Data Warehousing](Code/P7_Code.ipynb)
 I warehouse all data in a SQL Server instance for later use and reference.

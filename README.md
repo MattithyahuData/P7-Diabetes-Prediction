@@ -1,4 +1,4 @@
-# 🍫 Diabetes Prediction: Project Overview  
+# 🍫 Diabetes Prediction: Project Overview !!
 * End to end project reasearching the effects personal attributes have on the diagnosis of diabetes.
 * Optimised KNN, SVC, Decision Tree, and Random Forest Regressors using GridsearchCV and RandomizedSearchCV to reach the best model. 
 * Built a stakeholder facing visual deployment of model to predict churn of new customers 

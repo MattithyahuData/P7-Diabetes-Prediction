@@ -83,9 +83,6 @@ I looked at the distributions of the data and the value counts for the various c
 *   Boxplots were used to visualise features with outliers. These features will be scaled later before modelling. 
 <img src="images/boxplots.png" />
 
-*   I looked at the correlation the features have
-<img src="images/churn_correlation.png" />
-
 *   I visualised the distribution for those with diabetes
 <img src="images/histogramdistribution.png" />
 

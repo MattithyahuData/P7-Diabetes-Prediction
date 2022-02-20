@@ -3,7 +3,7 @@
 * Optimised SVC using GridsearchCV and RandomizedSearchCV to reach the best model performance. 
 * Deployed Model into production for wider use. See below.  
 
-## [Use Deployed Model](https://p7-diabetes-model.herokuapp.com/)
+#### [Use Deployed Model](https://p7-diabetes-model.herokuapp.com/)
 
 ## Table of Contents 
 [Resources](#resources)<br>

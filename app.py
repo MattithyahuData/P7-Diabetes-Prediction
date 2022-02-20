@@ -13,7 +13,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load pickle model
-model = pickle.load(open("Diabetes.pkl", "rb"))
+model = pickle.load(open("svc_diabetes.pkl", "rb"))
 
 # Define the home page
 @app.route('/')
@@ -22,7 +22,10 @@ def hello_world():
 
 # route() decorator to tell Flask what URL should trigger our function.
 @app.route('/predict',methods=['POST','GET'])
+# Predict method
 def predict():
+
+    # Inputs from website 
     text1 = request.form['1']
     text2 = request.form['2']
     text3 = request.form['3']
@@ -31,16 +34,34 @@ def predict():
     text6 = request.form['6']
     text7 = request.form['7']
     text8 = request.form['8']
- 
+    
+    # Inputs into dataframe 
     row_df = pd.DataFrame([pd.Series([text1,text2,text3,text4,text5,text6,text7,text8])])
-    print(row_df)
+    
+
+    # Finding the probability based on independent features
     prediction=model.predict_proba(row_df)
-    output='{0:.{1}f}'.format(prediction[0][1], 2)
-    output = str(float(output)*100)+'%'
-    if output>str(0.5):
-        return render_template('result.html',pred=f'You have chance of having diabetes.\nProbability of having Diabetes is {output}')
+
+    # Formatting, selecting index 1 in predict_proba to get probability to churn or Churn == 1. Rounding to 2 d.p
+    output=round(prediction[0][1], 2)
+
+    # if output is greater than 50% proba
+    if output> 0.5:
+
+        # Converting output to string and adding % suffix
+        output = str(float(output)*100)+'%'
+
+        # Return if risk of diabetes is greater than 50%
+        return render_template('result.html',pred=f'You have a higher risk of diabetes.\n\nYou have a {output} chance of having diabetes.')
+
+    # Else if proba is less than or equal to 0.5 
     else:
-        return render_template('result.html',pred=f'You are safe.\n Probability of having diabetes is {output}')
+
+        # Converting output to string and adding % suffix
+        output = str(float(output)*100)+'%'
+
+        # Return if risk of diabetes is less than or equal to 50%
+        return render_template('result.html',pred=f'You have a lower risk of diabetes.\n\nYou have a {output} chance of having diabetes.')
 
 
 

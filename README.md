@@ -1,5 +1,5 @@
 # 🍫 Diabetes Prediction: Project Overview
-* End to end project reasearching the effects personal attributes have on the diagnosis of diabetes.
+* End to end project researching the effects personal attributes have on the diagnosis of diabetes.
 * Optimised SVC using GridsearchCV and RandomizedSearchCV to reach the best model performance. 
 * Deployed Model into production for wider use. See below.  
 
@@ -22,7 +22,6 @@
 [Project Evaluation](#PrjEval)<br>
 [Looking Ahead](#Lookahead)<br>
 [Questions | Contact me ](#Lookahead)<br>
-
 
 <a name="Resources"></a>  
 
@@ -127,7 +126,6 @@ I tried four different models:
 *   **Logistic Regression** 
 *   **Random Forest Classifier**
 
-
 <img src="images/Crossvalidation.png" />
 
 <a name="ModelPerf"></a> 
@@ -141,16 +139,15 @@ The Logistic Regression model outperformed the other approaches on the test and 
 
 ## [Model Optimisation](Code/P7_Code.ipynb)
 In this step, I used GridsearchCV and RandomizedSearchCV to find the best parameters to optimise the performance of the model.
-Using the best parameters, I improved the SVC model accuracy of SVC by **1.3%**. The Logistic Regression model however saw no increase in accruacy. 
+Using the best parameters, I improved the SVC model accuracy of SVC by **1.3%**. The Logistic Regression model however saw no increase in accuracy. 
 
 *   **Logistic Regression** : Accuracy = 77.92% | MSE = 0.22 | RMSE =  0.47 (2dp)
 *   **SVC** : Accuracy = 77.27%  | MSE = 0.23 | RMSE =  0.48 (2dp)  
 
-
 <a name="ModelEval"></a> 
 
 ## [Model Evaluation](Code/P7_Code.ipynb)
-*   A confusion matrix showing the accuracy score of True and False predicitons achieved by the model. 
+*   A confusion matrix showing the accuracy score of True and False predictions achieved by the model. 
 
 *   Logistic Regression 
 <img src="images/Confusionmatrixlog.png" />
@@ -158,7 +155,7 @@ Using the best parameters, I improved the SVC model accuracy of SVC by **1.3%**.
 *   Support Vector Classification
 <img src="images/Confusionmatrixsvc.png" />
 
-*   Plotting the ROC Curve gave me some key insight to select the best performing model. Although Logistic regression has a higher accuracy value I selected the SVC model as the ROC Curve shows the SVC to predict more true positives and true negative which is key for deployment and use in unseen data. 
+*   Plotting the ROC Curve gave me some key insight to select the best performing model. Although Logistic regression has a higher accuracy value, I selected the SVC model as the ROC Curve shows the SVC to predict more true positives and true negative which is key for deployment and use in unseen data. 
 
 <img src="images/ROC_Curve.png" />
 
@@ -198,7 +195,7 @@ I built a flask REST API endpoint that was hosted on a local webserver before He
 
 ## Looking Ahead
 *   What next
-*   How can a better accruacy score be acheived? 
+*   How can a better accuracy score be achieved? 
 *   Explore other data sources 
 
 <a name="Questions"></a> 
@@ -207,4 +204,5 @@ I built a flask REST API endpoint that was hosted on a local webserver before He
 For questions, feedback, and contribution requests contact me
 * ### [Click here to email me](mailto:theanalyticsolutions@gmail.com) 
 * ### [See more projects here](https://github.com/MattithyahuData?tab=repositories)
+
 

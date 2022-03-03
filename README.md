@@ -203,7 +203,7 @@ I built a flask REST API endpoint that was hosted on a local webserver before He
 
 ## Questions | Contact me 
 For questions, feedback, and contribution requests contact me
-* ### [Click here to email me](mailto:theanalyticsolutions@gmail.com) 
+* ### [Click here to email me](mailto:contactmattithyahu@gmail.com) 
 * ### [See more projects here](https://github.com/MattithyahuData?tab=repositories)
 
 
